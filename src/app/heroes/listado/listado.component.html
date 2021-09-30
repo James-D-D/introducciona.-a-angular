@@ -1,0 +1,22 @@
+<div *ngIf="heroeBorrado; else noBorrado">
+
+    <h3>Heroe Borrado: <small> {{heroeBorrado}}</small></h3>
+
+</div>
+
+<ng-template #noBorrado>
+
+    <h3>No ha borrado nada</h3>
+
+</ng-template>
+
+<p>listado works!</p>
+
+
+<ul>
+    <li *ngFor="let heroe of heroes, let i = index" style="list-style: none;">
+        <input type="radio" name="heroes" id="{{ i }}" value="{{ i }}">
+        <label for="{{ i }}">{{heroe}}</label>
+    </li>
+</ul>
+<button (click)="borrarHeroe()"> Borrar </button>
