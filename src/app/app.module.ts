@@ -1,11 +1,13 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { PokemonService } from './services/pokemon.service';
-import { ContadorModule } from './contador/contador.module';
+import { MainPageComponent } from './dbz/main-page/main-page.component';
+import { DbzModule } from './dbz/dbz.module';
 
 
 
@@ -17,7 +19,8 @@ import { ContadorModule } from './contador/contador.module';
     BrowserModule,
     HeroesModule,
     HttpClientModule,
-    ContadorModule
+    DbzModule,
+    FormsModule
   ],
   providers: [
     PokemonService
